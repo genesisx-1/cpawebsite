@@ -9,30 +9,56 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    title: 'Senior Tax Partner',
-    company: 'Leading CPA Firm',
-    period: '2018 - Present',
-    description: 'Led tax planning and compliance services for diverse client portfolio'
+    title: 'Managing Partner',
+    company: 'Varun Saran, CPA LLC',
+    period: 'Feb 2025 - Present',
+    description: 'Providing comprehensive tax planning and compliance services to businesses and families across multiple industries globally. Specializing in expatriate taxation, international tax compliance (FBAR, BOI, Forms 5471/5472, FATCA), and serving high net worth individuals and family offices.'
   },
   {
-    title: 'Audit Manager',
-    company: 'Regional Accounting Firm',
-    period: '2015 - 2018',
-    description: 'Managed audit engagements for mid-market and enterprise clients'
+    title: 'Tax Associate',
+    company: 'BDO',
+    period: 'Jun 2024 - Jan 2025',
+    description: 'Provided expert tax advice and compliance services to high net worth individuals and family offices. Specialized in Gift & Estate Tax, Individual Tax, Partnership Tax, and Fiduciary Taxation. Developed family tax planning strategies including Family Limited Partnerships and grantor trust entities.'
   },
   {
-    title: 'Tax Specialist',
-    company: 'Public Accounting Firm',
-    period: '2012 - 2015',
-    description: 'Provided tax preparation and planning services for businesses and individuals'
+    title: 'Tax Professional',
+    company: 'Varun Saran, CPA LLC',
+    period: 'Dec 2023 - May 2024',
+    description: 'Delivered tax compliance and planning services for corporations, flow-through entities, and tax-exempt organizations. Served medical professionals, educators, and high net worth individuals. Provided international tax compliance, payroll services, and financial statement preparation. Specialized in real estate taxation, investment management taxation, and family office management.'
+  },
+  {
+    title: 'Tax Accountant',
+    company: 'RREAF Holdings',
+    period: 'Aug 2023 - Nov 2023',
+    description: 'Provided tax compliance and specialized accounting services for real estate entities including hotels, parking lots, and residential apartment complexes. Worked on real estate taxation and taxation of foreign partners (Form 8805), collaborating with COO and cross-functional teams.'
+  },
+  {
+    title: 'Tax Associate',
+    company: 'Barker Viggato, PLLC',
+    period: 'Jan 2023 - Apr 2023',
+    description: 'Served high net worth clients in real estate/hospitality, medical practices, law firms, and investment management. Specialized in REIT, RIC (Mutual Funds), and Delaware Statutory Trusts (DST) taxation. Handled complex tax engagements for corporations, partnerships, trusts, estates, and high net worth individuals.'
+  },
+  {
+    title: 'Senior Tax Manager',
+    company: 'VP Office LLC',
+    period: 'Jul 2020 - Dec 2022',
+    description: 'Collaborated with partners to provide tailored tax advice, bookkeeping, payroll processing, and financial reporting. Prepared various tax returns including amended returns, represented clients during IRS audits, and mentored colleagues. Ensured compliance with tax regulations while optimizing tax outcomes for clients.'
+  },
+  {
+    title: 'Tax Associate',
+    company: 'Whitley Penn',
+    period: 'Jul 2018 - Jan 2019',
+    description: 'Handled diverse tax returns with focus on oil and gas interests. Provided tax compliance and planning services for 1040s, 1065s, 1120/1120-S, 1041s, and 990s. Specialized in §613 statutory/percentage depletion methods and served businesses in upstream, midstream, and downstream oil & gas production.'
   }
 ]
 
 const certifications = [
-  'Certified Public Accountant (CPA)',
-  'Certified Fraud Examiner (CFE)',
-  'Certified Valuation Analyst (CVA)',
-  'Enrolled Agent (EA)'
+  {
+    name: 'Certified Public Accountant (CPA)',
+    issuer: 'Texas State Board of Public Accountancy',
+    issued: 'Feb 2022',
+    description: 'Licensed CPA with expertise in ASC 740 Tax Provisions, U.S. Generally Accepted Accounting Principles (GAAP), and comprehensive tax services'
+  }
 ]
 
 const testimonials = [
@@ -77,12 +103,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-xl">
+              <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-xl bg-gray-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop"
-                  alt="Varunsaran - Professional Consultant"
+                  src="/about-image.jpg"
+                  alt="Varun Saran - Professional Consultant"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -90,19 +116,20 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Background</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  With over a decade of experience in public accounting and financial advisory services, 
-                  we specialize in helping organizations navigate complex financial challenges and ensure 
-                  regulatory compliance.
+                  Varun Saran is a Certified Public Accountant with extensive experience serving high net worth individuals, 
+                  family offices, and businesses across multiple industries. With a career spanning over 8 years, he has 
+                  worked at prestigious firms including BDO, Barker Viggato, and Whitley Penn, before establishing his own practice.
                 </p>
                 <p>
-                  Our approach combines deep accounting expertise with strategic business acumen, 
-                  enabling clients to make informed financial decisions that drive measurable results. 
-                  We've worked with businesses across various industries, from startups to established enterprises.
+                  His expertise encompasses tax planning and compliance for individuals, partnerships, corporations, trusts, 
+                  and estates. He specializes in international taxation, expatriate taxation, real estate taxation, oil & gas 
+                  taxation, estate & gift taxation, and family office management. He has served clients in industries including 
+                  real estate, hospitality, medical practices, law firms, and investment management.
                 </p>
                 <p>
-                  We're passionate about providing comprehensive CPA services including tax planning, 
-                  audit services, and business advisory to help our clients achieve their financial goals 
-                  and maintain compliance with ever-changing regulations.
+                  As Managing Partner of Varun Saran, CPA LLC, he provides comprehensive tax services including tax planning, 
+                  compliance, international tax reporting, payroll services, and financial statement preparation. He is committed 
+                  to helping clients navigate complex tax regulations while optimizing their financial outcomes.
                 </p>
               </div>
             </div>
@@ -151,12 +178,19 @@ export default function AboutPage() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-6 bg-[#F7F9FB] rounded-lg"
+                className="p-6 bg-[#F7F9FB] rounded-lg border border-gray-200"
               >
-                <div className="w-12 h-12 bg-[#0066CC] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Award className="h-6 w-6 text-white" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#0066CC] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Award className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{cert.name}</h3>
+                    <p className="text-sm text-[#0066CC] font-medium mb-1">{cert.issuer}</p>
+                    <p className="text-xs text-gray-500 mb-2">Issued {cert.issued}</p>
+                    <p className="text-sm text-gray-600">{cert.description}</p>
+                  </div>
                 </div>
-                <p className="text-gray-900 font-medium">{cert}</p>
               </div>
             ))}
           </div>

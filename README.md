@@ -90,7 +90,7 @@ The contact form is now integrated with Resend API!
    ```
    RESEND_API_KEY=re_your_api_key_here
    CONTACT_EMAIL=your-email@example.com
-   VITE_NEWS_API_KEY=baa1c58af6f64e18870f52ad8b79be9e
+   VITE_NEWS_API_KEY=your_news_api_key_here
    ```
 
 3. **Verify Your Domain (Optional but Recommended):**
@@ -103,12 +103,26 @@ The contact form will now send emails directly to your inbox!
 
 The Insights page now fetches real-time news articles from NewsAPI.org!
 
-1. **API Key is already configured** - Your News API key is set up and ready to use
+1. **Get a News API Key:**
+   - Sign up at [newsapi.org](https://newsapi.org)
+   - Get your free API key from the dashboard
+   
 2. **Environment Variable** - Add to `.env.local`:
    ```
-   VITE_NEWS_API_KEY=baa1c58af6f64e18870f52ad8b79be9e
+   VITE_NEWS_API_KEY=your_news_api_key_here
    ```
-3. **Features:**
+
+3. **For Netlify Deployment:**
+   - Go to your Netlify site dashboard
+   - Navigate to Site settings → Environment variables
+   - Add a new variable:
+     - Key: `VITE_NEWS_API_KEY`
+     - Value: Your News API key (the same one you're using)
+   - Redeploy your site for changes to take effect
+   
+   **Note:** The code will also check for `NEWS_API_KEY` as a fallback, so either variable name will work in Netlify.
+
+4. **Features:**
    - Fetches latest business and technology news
    - Category filtering (Strategy, Technology, Innovation, Industry Trends)
    - Real-time article updates
@@ -123,12 +137,19 @@ Consider integrating:
 - MeiliSearch
 - Or a simple client-side search
 
-### 4. Deploy to Vercel
+### 4. Deploy to Netlify
 
 1. Push your code to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy!
+2. Import project in Netlify (or use Netlify CLI: `netlify deploy --prod`)
+3. **Add Environment Variables in Netlify:**
+   - Go to Site settings → Environment variables
+   - Add the following variables:
+     - `VITE_NEWS_API_KEY` - Your News API key from newsapi.org (or `NEWS_API_KEY` as fallback)
+     - `RESEND_API_KEY` - Your Resend API key (if using contact form)
+     - `CONTACT_EMAIL` - Email address for contact form submissions
+4. Redeploy your site for environment variables to take effect
+
+**Note:** Environment variables set in Netlify are only available at build time and runtime for server-side code. Make sure to redeploy after adding new variables.
 
 ## Customization
 

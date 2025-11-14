@@ -137,7 +137,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link 
             href="/" 
-            className="text-2xl font-bold text-gray-900 hover:text-[#E30613] transition-colors"
+            className="text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#E30613] transition-colors"
           >
             Varunsaran
           </Link>
@@ -148,7 +148,7 @@ export default function Header() {
                 key={item.name}
                 className="relative"
                 onMouseEnter={() => item.hasDropdown && setHoveredMenu(item.name)}
-                onMouseLeave={() => setHoveredMenu(null)}
+                onMouseLeave={() => item.hasDropdown && setHoveredMenu(null)}
               >
                 <Link
                   href={item.name === 'Services' ? '/services' : item.name === 'Insights' ? '/insights' : item.name === 'About' ? '/about' : '/contact'}
@@ -175,7 +175,7 @@ export default function Header() {
             </button>
             <Link
               href="/contact"
-              className="bg-[#E30613] text-white px-6 py-2 rounded font-semibold hover:bg-[#C10510] transition-colors"
+              className="bg-[#E30613] text-white px-4 sm:px-6 py-2 rounded text-sm sm:text-base font-semibold hover:bg-[#C10510] transition-colors"
             >
               CONTACT
             </Link>
@@ -203,14 +203,14 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 bg-white border-t border-gray-200 shadow-lg"
+            className="hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg z-50"
             onMouseEnter={() => setHoveredMenu('Services')}
             onMouseLeave={() => setHoveredMenu(null)}
           >
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-12 gap-8">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
                 {/* Left Panel - Categories */}
-                <div className="col-span-3 border-r border-gray-200 pr-6">
+                <div className="lg:col-span-3 lg:border-r lg:border-gray-200 lg:pr-6">
                   <h3 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
                     Services <ArrowRight className="h-4 w-4" />
                   </h3>
@@ -223,7 +223,7 @@ export default function Header() {
                             selectedCategory === idx ? 'bg-gray-100' : 'hover:bg-gray-50'
                           }`}
                         >
-                          <span className={`${selectedCategory === idx ? 'text-[#E30613] font-semibold' : 'text-gray-700'} group-hover:text-[#E30613] transition-colors`}>
+                          <span className={`${selectedCategory === idx ? 'text-[#E30613] font-semibold' : 'text-gray-700'} group-hover:text-[#E30613] transition-colors text-sm`}>
                             {category.name}
                           </span>
                           <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-[#E30613] transition-colors" />
@@ -234,7 +234,7 @@ export default function Header() {
                 </div>
 
                 {/* Middle Panel - Selected Category Items */}
-                <div className="col-span-5 border-r border-gray-200 pr-6">
+                <div className="lg:col-span-5 lg:border-r lg:border-gray-200 lg:pr-6">
                   <h3 className="text-sm font-bold text-gray-900 mb-4">
                     {servicesMenu.categories[selectedCategory].name}
                   </h3>
@@ -245,7 +245,7 @@ export default function Header() {
                         <li key={idx}>
                           <Link
                             href={`/services/${serviceId}`}
-                            className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors"
+                            className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors text-sm"
                           >
                             {item}
                           </Link>
@@ -256,7 +256,7 @@ export default function Header() {
                 </div>
 
                 {/* Right Panel - Featured */}
-                <div className="col-span-4">
+                <div className="lg:col-span-4 hidden lg:block">
                   <h3 className="text-sm font-bold text-gray-900 mb-4">FEATURED</h3>
                   <div className="space-y-4">
                     {servicesMenu.featured.map((feature, idx) => (
@@ -271,6 +271,7 @@ export default function Header() {
                             alt={feature.title}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 1024px) 0px, 200px"
                           />
                         </div>
                         <div className="flex items-center gap-2">
@@ -295,20 +296,20 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 bg-white border-t border-gray-200 shadow-lg"
+            className="hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg z-50"
             onMouseEnter={() => setHoveredMenu('Insights')}
             onMouseLeave={() => setHoveredMenu(null)}
           >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-              <div className="grid grid-cols-12 gap-8">
-                <div className="col-span-4 border-r border-gray-200 pr-6">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <div className="lg:col-span-4 lg:border-r lg:border-gray-200 lg:pr-6">
                   <h3 className="text-sm font-bold text-gray-900 mb-4">Categories</h3>
                   <ul className="space-y-2">
                     {insightsMenu.categories.map((cat, idx) => (
                       <li key={idx}>
                         <Link
                           href={cat.href}
-                          className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors"
+                          className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors text-sm"
                         >
                           {cat.name}
                         </Link>
@@ -316,7 +317,7 @@ export default function Header() {
                     ))}
                   </ul>
                 </div>
-                <div className="col-span-8">
+                <div className="lg:col-span-8 hidden lg:block">
                   <h3 className="text-sm font-bold text-gray-900 mb-4">FEATURED</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {insightsMenu.featured.map((feature, idx) => (
@@ -331,6 +332,7 @@ export default function Header() {
                             alt={feature.title}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 1024px) 0px, 300px"
                           />
                         </div>
                         <span className="text-sm font-semibold text-gray-900 group-hover:text-[#E30613] transition-colors">
@@ -352,7 +354,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 bg-white border-t border-gray-200 shadow-lg"
+            className="hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg z-50"
             onMouseEnter={() => setHoveredMenu('About')}
             onMouseLeave={() => setHoveredMenu(null)}
           >
@@ -364,7 +366,7 @@ export default function Header() {
                     <li key={idx}>
                       <Link
                         href={item.href}
-                        className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors"
+                        className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors text-sm"
                       >
                         {item.name}
                       </Link>
@@ -383,7 +385,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 bg-white border-t border-gray-200 shadow-lg"
+            className="hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg z-50"
             onMouseEnter={() => setHoveredMenu('Contact')}
             onMouseLeave={() => setHoveredMenu(null)}
           >
@@ -395,7 +397,7 @@ export default function Header() {
                     <li key={idx}>
                       <Link
                         href={item.href}
-                        className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors"
+                        className="block px-3 py-2 rounded hover:bg-gray-100 text-gray-700 hover:text-[#E30613] transition-colors text-sm"
                       >
                         {item.name}
                       </Link>
