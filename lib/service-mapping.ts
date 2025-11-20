@@ -22,7 +22,6 @@ export const serviceNameToId: Record<string, string> = {
   
   // Tax Services
   'Tax Planning & Strategy': 'tax-planning-strategy',
-  'International Tax': 'international-tax',
   'State & Local Tax': 'state-local-tax',
   'Tax Compliance': 'tax-compliance',
   'Estate & Trust Planning': 'estate-trust-planning',

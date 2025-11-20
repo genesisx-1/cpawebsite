@@ -1,6 +1,5 @@
 import Hero from '@/components/sections/Hero'
 import ServicesPreview from '@/components/sections/ServicesPreview'
-import InsightsPreview from '@/components/sections/InsightsPreview'
 import CTA from '@/components/sections/CTA'
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <>
       <Hero />
       <ServicesPreview />
-      <InsightsPreview />
       <CTA />
     </>
   )

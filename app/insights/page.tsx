@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import NewsArticles from '@/components/sections/NewsArticles'
 
-const categories = ['All', 'Tax', 'Audit & Assurance', 'Advisory', 'Industry Trends']
+const categories = ['All', 'Tax', 'Advisory', 'Industry Trends']
 
 const insights = [
   {
@@ -15,15 +15,6 @@ const insights = [
     category: 'Tax',
     date: 'January 15, 2025',
     readTime: '5 min read',
-    featured: true
-  },
-  {
-    slug: 'understanding-new-audit-requirements',
-    title: 'Understanding New Audit Requirements and Standards',
-    excerpt: 'A comprehensive guide to recent changes in audit standards and how they affect your business compliance.',
-    category: 'Audit & Assurance',
-    date: 'January 8, 2025',
-    readTime: '7 min read',
     featured: true
   },
   {
@@ -72,7 +63,6 @@ export default function InsightsPage() {
     const categoryMap: Record<string, string> = {
       'All': 'All',
       'Tax': 'Tax',
-      'Audit & Assurance': 'Audit',
       'Advisory': 'Advisory',
       'Industry Trends': 'trends',
     }
@@ -82,7 +72,7 @@ export default function InsightsPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0066CC] to-[#E30613] text-white py-20">
+      <section className="bg-gradient-to-br from-[#C9A961] to-[#D4AF37] text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Insights</h1>
           <p className="text-xl text-gray-100 max-w-3xl">
@@ -101,7 +91,7 @@ export default function InsightsPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   category === selectedCategory
-                    ? 'bg-[#E30613] text-white'
+                    ? 'bg-[#D4AF37] text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -124,9 +114,9 @@ export default function InsightsPage() {
                   key={insight.slug}
                   className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer group"
                 >
-                  <div className="h-48 bg-gradient-to-br from-[#0066CC] to-[#E30613] relative">
+                  <div className="h-48 bg-gradient-to-br from-[#C9A961] to-[#D4AF37] relative">
                     <div className="absolute top-4 left-4">
-                      <span className="bg-white text-[#E30613] px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="bg-white text-[#D4AF37] px-3 py-1 rounded-full text-xs font-semibold">
                         {insight.category}
                       </span>
                     </div>
@@ -142,7 +132,7 @@ export default function InsightsPage() {
                         <span>{insight.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors">
                       {insight.title}
                     </h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -150,7 +140,7 @@ export default function InsightsPage() {
                     </p>
                     <Link
                       href={`/insights/${insight.slug}`}
-                      className="inline-flex items-center gap-1 text-[#0066CC] font-medium hover:gap-2 transition-all group-hover:text-[#E30613]"
+                      className="inline-flex items-center gap-1 text-[#C9A961] font-medium hover:gap-2 transition-all group-hover:text-[#D4AF37]"
                     >
                       Read More
                       <ArrowRight className="h-4 w-4" />

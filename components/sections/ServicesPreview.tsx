@@ -1,31 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { FileText, Shield, Receipt, ArrowRight } from 'lucide-react'
+import { Receipt, ArrowRight } from 'lucide-react'
 
 const services = [
-  {
-    title: 'Advisory',
-    description: 'Strategic business advisory services to help you navigate complex financial decisions and drive growth.',
-    icon: FileText,
-    href: '/services#advisory',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop'
-  },
-  {
-    title: 'Audit & Assurance',
-    description: 'Comprehensive audit and assurance services to ensure financial accuracy and regulatory compliance.',
-    icon: Shield,
-    href: '/services#audit-assurance',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop'
-  },
   {
     title: 'Tax Services',
     description: 'Expert tax planning, preparation, and compliance services to minimize your tax burden and maximize savings.',
     icon: Receipt,
-    href: '/services#tax',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop'
+    href: '/services#tax'
   }
 ]
 
@@ -44,7 +28,7 @@ export default function ServicesPreview() {
             Our Services
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive CPA services designed to support your business financial needs
+            A tax professional with experience in a variety of tax matters
           </p>
         </motion.div>
 
@@ -59,24 +43,13 @@ export default function ServicesPreview() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#E30613] transition-all group cursor-pointer shadow-md hover:shadow-xl"
+                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#D4AF37] transition-all group cursor-pointer shadow-md hover:shadow-xl"
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <div className="w-12 h-12 bg-[#E30613] rounded-lg flex items-center justify-center group-hover:bg-[#0066CC] transition-colors shadow-lg">
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors">
+                  <div className="w-12 h-12 bg-[#D4AF37] rounded-lg flex items-center justify-center group-hover:bg-[#C9A961] transition-colors shadow-lg mb-4">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">
@@ -84,7 +57,7 @@ export default function ServicesPreview() {
                   </p>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-1 text-[#E30613] font-medium hover:gap-2 transition-all group-hover:text-[#0066CC]"
+                    className="inline-flex items-center gap-1 text-[#D4AF37] font-medium hover:gap-2 transition-all group-hover:text-[#C9A961]"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -104,7 +77,7 @@ export default function ServicesPreview() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-[#0066CC] font-semibold hover:text-[#E30613] transition-colors"
+            className="inline-flex items-center gap-2 text-[#C9A961] font-semibold hover:text-[#D4AF37] transition-colors"
           >
             View All Services
             <ArrowRight className="h-5 w-5" />

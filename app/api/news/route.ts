@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
 
     const response = await fetch(`${apiUrl}&apiKey=${NEWS_API_KEY}`, {
       headers: {
-        'User-Agent': 'Varunsaran-CPA-Website/1.0',
+        'User-Agent': 'Varun Saran-CPA-Website/1.0',
       },
     })
 

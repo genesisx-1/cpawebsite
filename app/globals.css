@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #2C3E50;
-  --primary: #E30613;
-  --secondary: #0066CC;
+  --primary: #D4AF37;
+  --secondary: #C9A961;
   --accent-bg: #F7F9FB;
   --footer-bg: #1a1a1a;
 }
@@ -71,13 +71,13 @@ body {
 }
 
 .prose a {
-  color: #0066CC;
+  color: #C9A961;
   text-decoration: underline;
   transition: color 0.2s;
 }
 
 .prose a:hover {
-  color: #E30613;
+  color: #D4AF37;
 }
 
 .prose strong {

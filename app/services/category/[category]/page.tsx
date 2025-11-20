@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   
   if (!categoryInfo) {
     return {
-      title: 'Category Not Found - Varunsaran CPA'
+      title: 'Category Not Found - Varun Saran CPA'
     }
   }
   
   return {
-    title: `${categoryInfo.title} - Varunsaran CPA`,
+    title: `${categoryInfo.title} - Varun Saran CPA`,
     description: categoryInfo.description,
   }
 }
@@ -80,7 +80,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0066CC] to-[#E30613] text-white py-20">
+      <section className="bg-gradient-to-br from-[#C9A961] to-[#D4AF37] text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/services"
@@ -117,13 +117,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                         href={`/services/${cat.slug}`}
                         className={`block px-3 py-2 rounded transition-colors flex items-center justify-between group ${
                           category === cat.slug
-                            ? 'bg-gray-100 text-[#E30613] font-semibold'
+                            ? 'bg-gray-100 text-[#D4AF37] font-semibold'
                             : 'hover:bg-gray-50 text-gray-700'
                         }`}
                       >
                         <span>{cat.name}</span>
                         <ArrowRight className={`h-4 w-4 transition-colors ${
-                          category === cat.slug ? 'text-[#E30613]' : 'text-gray-400 group-hover:text-[#E30613]'
+                          category === cat.slug ? 'text-[#D4AF37]' : 'text-gray-400 group-hover:text-[#D4AF37]'
                         }`} />
                       </Link>
                     </li>
@@ -144,7 +144,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                     href={`/services/${service.id}`}
                     className="block group"
                   >
-                    <div className="flex flex-col md:flex-row gap-6 p-6 bg-white border border-gray-200 rounded-lg hover:border-[#E30613] hover:shadow-lg transition-all">
+                    <div className="flex flex-col md:flex-row gap-6 p-6 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF37] hover:shadow-lg transition-all">
                       {service.image && (
                         <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0">
                           <Image
@@ -156,7 +156,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors">
                           {service.title}
                         </h3>
                         <p className="text-gray-600 mb-4">
@@ -168,7 +168,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                               key={idx}
                               className="inline-flex items-center gap-1 text-sm text-gray-600 bg-gray-50 px-3 py-1 rounded-full"
                             >
-                              <CheckCircle className="h-3 w-3 text-[#E30613]" />
+                              <CheckCircle className="h-3 w-3 text-[#D4AF37]" />
                               {feature}
                             </span>
                           ))}
@@ -178,7 +178,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                             </span>
                           )}
                         </div>
-                        <div className="inline-flex items-center gap-2 text-[#0066CC] font-medium group-hover:text-[#E30613] transition-colors">
+                        <div className="inline-flex items-center gap-2 text-[#C9A961] font-medium group-hover:text-[#D4AF37] transition-colors">
                           Learn More
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </div>
@@ -203,7 +203,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#E30613] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#C10510] transition-colors"
+            className="inline-block bg-[#D4AF37] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#B8860B] transition-colors"
           >
             Contact Us
           </Link>

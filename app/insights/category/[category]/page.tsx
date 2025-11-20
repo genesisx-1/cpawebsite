@@ -46,12 +46,12 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   
   if (!categoryInfo) {
     return {
-      title: 'Category Not Found - Varunsaran CPA'
+      title: 'Category Not Found - Varun Saran CPA'
     }
   }
   
   return {
-    title: `${categoryInfo.title} - Insights | Varunsaran CPA`,
+    title: `${categoryInfo.title} - Insights | Varun Saran CPA`,
     description: categoryInfo.description,
   }
 }
@@ -202,7 +202,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0066CC] to-[#E30613] text-white py-20">
+      <section className="bg-gradient-to-br from-[#C9A961] to-[#D4AF37] text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/insights"
@@ -239,13 +239,13 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                         href={`/insights/category/${cat.slug}`}
                         className={`block px-3 py-2 rounded transition-colors flex items-center justify-between group ${
                           category === cat.slug
-                            ? 'bg-gray-100 text-[#E30613] font-semibold'
+                            ? 'bg-gray-100 text-[#D4AF37] font-semibold'
                             : 'hover:bg-gray-50 text-gray-700'
                         }`}
                       >
                         <span>{cat.name}</span>
                         <ArrowRight className={`h-4 w-4 transition-colors ${
-                          category === cat.slug ? 'text-[#E30613]' : 'text-gray-400 group-hover:text-[#E30613]'
+                          category === cat.slug ? 'text-[#D4AF37]' : 'text-gray-400 group-hover:text-[#D4AF37]'
                         }`} />
                       </Link>
                     </li>
@@ -266,9 +266,9 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                         key={insight.slug}
                         className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer group border border-gray-200"
                       >
-                        <div className="h-48 bg-gradient-to-br from-[#0066CC] to-[#E30613] relative">
+                        <div className="h-48 bg-gradient-to-br from-[#C9A961] to-[#D4AF37] relative">
                           <div className="absolute top-4 left-4">
-                            <span className="bg-white text-[#E30613] px-3 py-1 rounded-full text-xs font-semibold">
+                            <span className="bg-white text-[#D4AF37] px-3 py-1 rounded-full text-xs font-semibold">
                               {categoryInfo.title}
                             </span>
                           </div>
@@ -284,7 +284,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                               <span>{insight.readTime}</span>
                             </div>
                           </div>
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors">
                             {insight.title}
                           </h3>
                           <p className="text-gray-600 text-sm mb-4 line-clamp-2">
@@ -292,7 +292,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                           </p>
                           <Link
                             href={`/insights/${insight.slug}`}
-                            className="inline-flex items-center gap-1 text-[#0066CC] font-medium hover:gap-2 transition-all group-hover:text-[#E30613]"
+                            className="inline-flex items-center gap-1 text-[#C9A961] font-medium hover:gap-2 transition-all group-hover:text-[#D4AF37]"
                           >
                             Read More
                             <ArrowRight className="h-4 w-4" />
@@ -312,7 +312,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                     {allInsights.map((insight) => (
                       <article
                         key={insight.slug}
-                        className="bg-white rounded-lg p-6 border border-gray-200 hover:border-[#E30613] hover:shadow-md transition-all group"
+                        className="bg-white rounded-lg p-6 border border-gray-200 hover:border-[#D4AF37] hover:shadow-md transition-all group"
                       >
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
@@ -326,7 +326,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                                 <span>{insight.readTime}</span>
                               </div>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors">
                               {insight.title}
                             </h3>
                             <p className="text-gray-600 mb-4">
@@ -334,7 +334,7 @@ export default async function InsightsCategoryPage({ params }: { params: Promise
                             </p>
                             <Link
                               href={`/insights/${insight.slug}`}
-                              className="inline-flex items-center gap-1 text-[#0066CC] font-medium hover:gap-2 transition-all group-hover:text-[#E30613]"
+                              className="inline-flex items-center gap-1 text-[#C9A961] font-medium hover:gap-2 transition-all group-hover:text-[#D4AF37]"
                             >
                               Read More
                               <ArrowRight className="h-4 w-4" />

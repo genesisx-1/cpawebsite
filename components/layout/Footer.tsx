@@ -7,7 +7,6 @@ export default function Footer() {
   const footerLinks = {
     main: [
       { name: 'Services', href: '/services' },
-      { name: 'Insights', href: '/insights' },
       { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' }
     ]
@@ -25,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Varunsaran</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Varun Saran</h3>
             <p className="text-sm text-gray-400 mb-4">
               Strategic consulting for digital transformation. 
               Elevating businesses with data-driven insights and innovative solutions.
@@ -76,11 +75,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 focus:outline-none focus:border-[#E30613] transition-colors"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] transition-colors"
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-[#E30613] text-white rounded hover:bg-[#C10510] transition-colors font-medium"
+                className="px-6 py-2 bg-[#D4AF37] text-white rounded hover:bg-[#B8860B] transition-colors font-medium"
               >
                 Subscribe
               </button>
@@ -89,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>&copy; {currentYear} Varunsaran. All rights reserved.</p>
+          <p>&copy; {currentYear} Varun Saran. All rights reserved.</p>
         </div>
       </div>
     </footer>

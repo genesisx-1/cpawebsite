@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-r from-[#0066CC] to-[#E30613] text-white">
+    <section className="py-20 bg-gradient-to-r from-[#C9A961] to-[#D4AF37] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export default function CTA() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#0066CC] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 bg-white text-[#C9A961] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
             >
               Get Started Today
               <ArrowRight className="h-5 w-5" />

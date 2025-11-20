@@ -81,7 +81,7 @@ Configure in the contact form component.
 
 **Colors**: Edit CSS variables in `/app/globals.css`
 **Fonts**: Change in `/app/layout.tsx` (currently using Inter)
-**Logo**: Replace "Varunsaran" text in Header with your logo image
+**Logo**: Replace "Varun Saran" text in Header with your logo image
 
 ### 5. Project Structure
 

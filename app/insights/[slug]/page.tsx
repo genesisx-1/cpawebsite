@@ -225,12 +225,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   if (!post) {
     return {
-      title: 'Post Not Found - Varunsaran CPA'
+      title: 'Post Not Found - Varun Saran CPA'
     }
   }
   
   return {
-    title: `${post.title} - Varunsaran CPA`,
+    title: `${post.title} - Varun Saran CPA`,
     description: post.content.replace(/<[^>]*>/g, '').substring(0, 160)
   }
 }
@@ -245,7 +245,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0066CC] to-[#E30613] text-white py-20">
+      <section className="bg-gradient-to-br from-[#C9A961] to-[#D4AF37] text-white py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/insights"
@@ -255,7 +255,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             Back to Insights
           </Link>
           <div className="mb-4">
-            <span className="bg-white text-[#E30613] px-3 py-1 rounded-full text-sm font-semibold">
+            <span className="bg-white text-[#D4AF37] px-3 py-1 rounded-full text-sm font-semibold">
               {post.category}
             </span>
           </div>
@@ -277,7 +277,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <article className="py-12">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div 
-            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-[#0066CC] prose-strong:text-gray-900"
+            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-[#C9A961] prose-strong:text-gray-900"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
@@ -294,7 +294,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#E30613] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#C10510] transition-colors"
+            className="inline-block bg-[#D4AF37] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#B8860B] transition-colors"
           >
             Get In Touch
           </Link>

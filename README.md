@@ -1,4 +1,4 @@
-# Varunsaran.com - Consulting Website
+# Varun Saran.com - Consulting Website
 
 A modern, professional consulting website built with Next.js 14, inspired by BDO's design aesthetic.
 
@@ -167,4 +167,4 @@ Currently using static content. Once Sanity is set up, content will be managed t
 
 ## License
 
-Private project for Varunsaran.com
+Private project for Varun Saran.com

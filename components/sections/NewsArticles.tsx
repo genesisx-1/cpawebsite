@@ -76,7 +76,7 @@ export default function NewsArticles({ category = 'business', limit = 6 }: NewsA
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <Loader2 className="h-8 w-8 animate-spin text-[#E30613]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#D4AF37]" />
         <span className="ml-3 text-gray-600">Loading articles...</span>
       </div>
     )
@@ -117,12 +117,12 @@ export default function NewsArticles({ category = 'business', limit = 6 }: NewsA
                 onError={(e) => {
                   // Fallback to gradient if image fails to load
                   e.currentTarget.style.display = 'none'
-                  e.currentTarget.parentElement!.style.background = 'linear-gradient(to bottom right, #0066CC, #E30613)'
+                  e.currentTarget.parentElement!.style.background = 'linear-gradient(to bottom right, #C9A961, #D4AF37)'
                 }}
               />
             </div>
           ) : (
-            <div className="h-48 bg-gradient-to-br from-[#0066CC] to-[#E30613]"></div>
+            <div className="h-48 bg-gradient-to-br from-[#C9A961] to-[#D4AF37]"></div>
           )}
           
           <div className="p-6">
@@ -135,12 +135,12 @@ export default function NewsArticles({ category = 'business', limit = 6 }: NewsA
             </div>
             
             <div className="mb-2">
-              <span className="bg-[#E30613] text-white px-3 py-1 rounded-full text-xs font-semibold">
+              <span className="bg-[#D4AF37] text-white px-3 py-1 rounded-full text-xs font-semibold">
                 {article.source}
               </span>
             </div>
             
-            <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#E30613] transition-colors line-clamp-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#D4AF37] transition-colors line-clamp-2">
               {article.title}
             </h3>
             
@@ -152,7 +152,7 @@ export default function NewsArticles({ category = 'business', limit = 6 }: NewsA
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[#0066CC] font-medium hover:gap-2 transition-all group-hover:text-[#E30613]"
+              className="inline-flex items-center gap-1 text-[#C9A961] font-medium hover:gap-2 transition-all group-hover:text-[#D4AF37]"
             >
               Read Article
               <ExternalLink className="h-4 w-4" />

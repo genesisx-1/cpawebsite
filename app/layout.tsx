@@ -16,27 +16,27 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Varunsaran - Trusted CPA | Accounting, Tax & Advisory",
+  title: "Varun Saran - Trusted Tax Professional",
   description: "Comprehensive CPA services including accounting, tax preparation, audit & assurance, and business advisory services for your business success.",
   keywords: "CPA, accounting services, tax preparation, audit services, business advisory, financial consulting, CPA firm",
   openGraph: {
-    title: "Varunsaran - Trusted CPA | Accounting, Tax & Advisory",
-    description: "Varunsaran - Comprehensive CPA services including accounting, tax preparation, audit & assurance, and business advisory services for your business success.",
+    title: "Varun Saran - Trusted Tax Professional",
+    description: "Varun Saran - Comprehensive CPA services including accounting, tax preparation, audit & assurance, and business advisory services for your business success.",
     type: "website",
-    siteName: "Varunsaran",
+    siteName: "Varun Saran",
     images: [
       {
         url: "https://varoon.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Varunsaran CPA Services",
+        alt: "Varun Saran CPA Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Varunsaran - Trusted CPA | Accounting, Tax & Advisory",
-    description: "Varunsaran - Comprehensive CPA services including accounting, tax preparation, audit & assurance, and business advisory services for your business success.",
+    title: "Varun Saran - Trusted Tax Professional",
+    description: "Varun Saran - Comprehensive CPA services including accounting, tax preparation, audit & assurance, and business advisory services for your business success.",
     images: ["https://varoon.netlify.app/og-image.jpg"],
   },
   metadataBase: new URL("https://varoon.netlify.app"),

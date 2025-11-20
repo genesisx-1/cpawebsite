@@ -43,36 +43,6 @@ export const allServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop'
   },
   {
-    id: 'international-tax',
-    title: 'International Tax',
-    category: 'Tax',
-    description: 'Comprehensive international tax services for businesses and individuals with cross-border transactions and operations.',
-    longDescription: 'We provide expert international tax services to help businesses and individuals navigate complex cross-border tax issues, including transfer pricing, foreign tax credits, and treaty benefits. Our team ensures compliance across multiple jurisdictions while optimizing your global tax position.',
-    keyFeatures: [
-      'Cross-border tax planning',
-      'Transfer pricing services',
-      'Foreign tax credit optimization',
-      'Tax treaty analysis',
-      'Expatriate tax services',
-      'International compliance'
-    ],
-    benefits: [
-      'Minimize global tax liability',
-      'Ensure compliance across jurisdictions',
-      'Optimize international operations',
-      'Avoid double taxation',
-      'Maximize treaty benefits'
-    ],
-    whoNeedsThis: [
-      'Multinational businesses',
-      'Companies with foreign operations',
-      'Expatriates',
-      'Foreign investors',
-      'Businesses with cross-border transactions'
-    ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
-  },
-  {
     id: 'state-local-tax',
     title: 'State & Local Tax',
     category: 'Tax',
